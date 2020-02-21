@@ -1,0 +1,63 @@
+---
+title: "Redes 2: Tarea Subnetting Ipv4"
+author: "Jonatan Ahumada"
+date: "2/21/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Enunciado
+
+1. ¿Cuál es la máscara más adecuada para conectar 64 enrutadores con un punto principal?. El proveedor le asigna una red 192.168.100.0 con mascara tipo C.
+
+2. Adicionalmente, averigüe la ip de red y la ip de broadcast de la sub-red 32
+
+## Solución
+
+1. Máscara de subred
+
+A cada enrutador le corresponde una red, por lo que necesitaremos 64 redes. Consecuentemente, necesitamos averiguar el número de bits para codificar 64 redes. Utilizaremos la fórmula $\log_{2}{n}= bits\ necesarios$.
+
+
+El número de bits es $\log_{2}{64}=$  `r log2(64)`.
+
+Por lo que nuestra máscara, para la ip clase C dada, se verá así:
+
+            11111111.11111111.11111111.11111100 
+            ---------------------------------
+            
+            bits de red: ---
+            bits de host: {sin marca}
+            
+En su notación decimal, será:
+  
+            255.255.255.252/30    //máscara de subred
+            
+
+2. Ip de red y de broadcast para subred 32. 
+
+            Notación binaria para último octeto de subred 32
+            xxxxxxx.xxxxxxxx.xxxxxxxx.111111xx/30  
+                                      ------ 
+            bits de red: ------
+            
+            
+Nuestra ip de red tendrá 0 en los bits de host
+
+            xxxxxxx.xxxxxxxx.xxxxxxxx.11111100/30:  
+            192.168.100.252/30   //ip de red
+
+Nuestra ip de broadcast tendrá 1 en nuestros bits de host:         
+
+            xxxxxxx.xxxxxxxx.xxxxxxxx.11111111/30  
+            192.168.100.255/30  //ip de broadcast
+            
+            
+            
+            
+            
+            
+
+            
