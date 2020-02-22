@@ -1,0 +1,22 @@
+---
+title: 'Redes2: ipv6'
+author: "Jonatan Ahumada"
+date: "22/2/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 
+
+La nomenclatura correcta es:
+
+- prefijo : red
+- interface: bits de host
+
+- aquí puede haber más de una interface para un equipo
+
+- los primeros 3 hextetos  son de proveedor 
+
