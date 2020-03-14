@@ -1,4 +1,6 @@
 # Clase 2
+## Datos importantes
+- Contrasenaredes2
 ## Repaso OSI
 ![tomado de: Prof. Óscar Eraso ](capas_osi.png)
 
